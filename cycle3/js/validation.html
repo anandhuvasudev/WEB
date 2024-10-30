@@ -1,0 +1,247 @@
+<html>
+<head>
+        <title>STUDENT REGISTRATION FORM</title>
+        	<script>
+        		function isAlphabetic(str){
+        			for(var i=0;i<str.length;i++){
+        				var charcode=str.charcodeAt(i);
+        			if(!charcode>=65&&charcode<=90)
+        			&&!(charcode>=97&&charcode<=122){
+        				return flase;
+        					}
+        				}
+        			return true;
+        			}
+        		function validateForm(){
+        			var firstName=document.forms["studentform"]["firstName"].value;
+        			var lastName=document.forms["studentform"]["lastName"].value;
+        				if(firstName==""||FirstName.length>30|| !isAlphabetic(firstName)){
+        			alert("First name be filled out,contain only alhabets and be less than 30 character";)
+        			return false;
+        		}
+        		var email=document.forms["studentform"]["email"].value;
+        		var mobile=document.forms["studentform"]["mobile"].value;
+        		var pincode=document.forms["studentform"]["pincode"].value;
+        		var password=document.forms["studentform"]["password"].value;
+        			if(email==""||email.indexof("@")==-1||email.indexof(",")=-1){
+        				alert("Please enter a valid email address");
+        				return false;
+        			}
+        		if(mobile.length!=10||is NaN(mobile)){
+        			alert("please enter a valid 10-digit mobile number");
+        				return false;
+        			}
+        		if(pincode.length!=6||is NaN(pincode)){
+        			alert("please enter a valid 6-digit pincode");
+        				return false;
+        			}
+        		if(password.length>30){
+        			alert("password should be less than 30 character");
+        				return false;
+        			}
+        			return true;
+        		}	
+        	</script>
+</head>
+<body>
+        <h2 align="center">STUDENT REGISRATION FORM</h2>
+        <table align="center" border="1" cellpadding="8px">
+                <form>
+                        <tr>
+                                <td>FIRST NAME</td>
+                                <td><input type="text" name="firstName" placeholder="Enter first name">&nbsp;(max 30 characters)</td>
+                        </tr>
+                        <tr>
+                                <td>LAST NAME</td>
+                                <td><input type="text" name="lastName" placeholder="Enter last name">&nbsp;(max 30 characters)</td>
+                        </tr>
+                        <tr>
+                        <Td>date of birth</Td>
+                        <Td>
+                        <select name="day">
+                                <option>Day</option
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                                <option>25</option>
+                                <option>26</option>
+                                <option>27</option>
+                                <option>28</option>
+                                <option>30</option>
+                                <option>31</option>
+                        </select>&nbsp;
+                        <select name ="month">
+                                <option>Month</option>
+                                <option>January</option>
+                                <option>February</option>
+                                <option>March</option>
+                                <option>April</option>
+                                <option>May</option>
+                                <option>June</option>
+                                <option>July</option>
+                                <option>August</option>
+                                <option>September</option>
+                                <option>October</option>
+                                <option>November</option>
+                                <option>December</option>
+                        </select>&nbsp;
+                        <select name="year">
+                                <option>Year</option>
+                                <option>2001</option>
+                                <option>2002</option>
+                                <option>2003</option>
+                                <option>2004</option>
+                                <option>2005</option>
+                                <option>2006</option>
+                                <option>2007</option>
+                                <option>2008</option>
+                                <option>2009</option>
+                                <option>2010</option>
+                                <option>2011</option>
+                                <option>2013</option>
+                                <option>2014</option>
+                                <option>2015</option>
+                                <option>2016</option>
+                                <option>2017</option>
+                                <option>2018</option>
+                                <option>2019</option>
+                                <option>2020</option>
+                                <option>2021</option>
+                                <option>2022</option>
+                                <option>2023</option>
+                                <option>2024</option>
+                                
+                        </select>
+                </td>
+        </tr>
+        <tr>
+                <td>EMAIL ID</td>
+                <td><input type="email" name="email" placeholder="Enter email"></td>
+        </tr>
+         <tr>
+                <td>MOBILE</td>
+                <td><input type="mobile" name="mobile" placeholder="Enter mobile no"></td>
+        </tr>
+        <tr>
+                <td>GENDER</td>
+                <td><input type="radio" name="male" >male<input type="radio" name="male">Female</td>
+        </tr>
+        <tr>
+                <td>ADDRESS</td>
+                <td><input type="textarea" name="address"></td>
+        </tr>
+        <tr>
+                <td>CITY</td>
+                <td><input type="text" name="city">&nbsp;(max 30 characters)</td>
+        </tr>
+        <tr>
+                <td>PINCODE</td>
+                <td><input type="text" name="pincode">&nbsp;(6 digit number)</td>
+        </tr>
+        <tr>
+                <td>STATE</td>
+                <td><input type="text" name="state">&nbsp;(max 30 characters)</td>
+        </tr>
+        <tr>
+                <td>COUNTRY</td>
+                <td><input type="text" name="country" value="INDIA">&nbsp;</td>
+        </tr>
+        <tr>
+                <td>HOBBIES</td>
+                <td>Drawing<input type="checkbox" name="hobbies">Singing<input type="checkbox" name="hobbies">Dancing<input type="checkbox" name="hobbies">Sketching<input type="checkbox" name="hobbies"><br>Others<input type="checkbox" name="hobbies"><input type="text" name="hobbies"></td>
+        </tr>
+        <tr>
+                <td>QUALIFICATION</td>
+                <td>
+                        <table>
+                                <tr>
+                                        <th>SLNO</th>
+                                        <th>Examination</th>
+                                        <th>Board</th>
+                                        <th>Percentage</th>
+                                        <th>Year of Passing</th>
+                                </tr>
+                                <tr>
+                                        <td>1</td>
+                                        <td>Class X</td>
+                                        <td><input type="text" name="classXboard"></td>
+                                        <td><input type="text" name="classXpercentage"></td>
+                                        <td><input type="text" name="year"></td>
+                                </tr>
+                                <tr>
+                                        <td>2</td>
+                                        <td>Class XII</td>
+                                        <td><input type="text" name="classXIIbord"></td>
+                                        <td><input type="text" name="classXIIpercentage"></td>
+                                        <td><input type="text" name="year"></td>
+                                </tr>
+                                <tr>
+                                        <td>3</td>
+                                        <td>Graduation</td>
+                                        <td><input type="text" name="gradboard"></td>
+                                        <td><input type="gardepercentage"></td>
+                                        <td><input type="gradyear"></td>
+                                </tr>
+                                <tr>
+                                <td>4</td>
+                                <td>Masters</td>
+                                <td><input type="text" name="masterboard"></td>
+                                <td><input type="text" name="masterpercentage"></td>
+                                <td><input type="text" name="masteryear"></td>
+                        </tr>
+                        <tr>
+                       <td></td>
+                        <td></td>
+                        <td><center>(10 char max)</center></td>
+                        <td><center>(upto 2 decimal)</center></td>
+                        <td><center>(10 char max)</center></td>
+                        
+                </tr>
+        </table>
+</td>
+</tr>
+<tr>
+        <td>COURSES<br>APPLIED FOR</td>
+        <td>MCA<input type="radio" name="cource">M.Tech<input type="radio" name="cource" >MS.c<input type="radio" name="cource" >Ph.D<input type="radio" name="cource"></td>
+</tr>
+<tr>
+        <td>TYPE YOUR PASSWORD</td>
+        <td><input type="password" name="password">&nbsp;(max 30 characters)</td>
+</tr>
+<tr>
+        <td>upload your photo</td>
+        <td><input type="file" name="photo"></td>
+</tr>
+<tr>
+                        <td>DATE OF TC</td>
+                        <td><input type="date" name="date_tc"></td>
+                </tr>
+                <tr>
+                <td colspan="2"><center><input type="submit">&nbsp;<input type="reset"></td>
+                <\tr>
+                </form>
+                </table>
+                </body>
+                </html>
+

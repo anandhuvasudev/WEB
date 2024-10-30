@@ -1,0 +1,36 @@
+p{
+	font-family:Arial,sans-serif;
+	font-size:16px;
+	color:white;
+	background-color:green;
+	padding:10px;
+	}
+.class-selector{
+	font-family:"courier new",monospace;
+	font-size:18px;
+	color:black;
+	background-color:yellow;
+	padding:10px;
+	}
+#id-selector{
+	font-family:"Times New Roman",Times serif;
+	font-size:20px;
+	color:white;
+	background-color:blue;
+	padding:10px;
+	}
+.grouped-selector{
+	font-family:"Verdana",serif;
+	font-size:18px;
+	color:darkred;
+	background-color:lightgrey;
+	padding:10px;
+	}
+div.container p.descendant-selector{
+	font-family:"Georgia",serif;
+	font-size:16px;
+	color:darkblue;
+	background-color:lightgreen;
+	padding:10px;	
+	}
+	
