@@ -11,7 +11,6 @@ if ($conn->connect_error) {
 }
 
 $email = $password = "";
-$login_success = false;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
     $email = $_POST['email'];
@@ -25,7 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
         $row = $result->fetch_assoc();
         // Verify password
         if ($row['password'] === $password) { // In a real application, use password_hash() and password_verify()
-            $login_success = true;
+            session_start();
+            $_SESSION['email'] = $email; // Store user session data
+            header("Location: welcome.php");
+            exit();
         } else {
             echo "<script>alert('Invalid password.');</script>";
         }
@@ -56,12 +58,6 @@ $conn->close();
         </tr>
     </table>
 </form>
-
-<?php
-if ($login_success) {
-    echo "<h3>Successfully logged in!</h3>";
-}
-?>
 
 </body>
 </html>
